@@ -1,0 +1,11 @@
+Product ID,Product Name,Category,Quantity in Stock,Unit Price,Total Sales
+101,Wireless Mouse,Electronics,150,20.99,3148.5
+102,Keyboard,Electronics,80,45.5,3640.0
+103,Monitor,Electronics,60,150.0,9000.0
+104,Laptop,Electronics,30,750.0,22500.0
+105,Smartphone,Electronics,100,550.0,27500.0
+106,Notebook,Stationery,500,3.5,1750.0
+107,Pen,Stationery,1000,1.25,1250.0
+108,Desk Chair,Furniture,20,85.0,1700.0
+109,Office Desk,Furniture,10,200.0,2000.0
+110,Water Bottle,Accessories,300,12.0,3600.0

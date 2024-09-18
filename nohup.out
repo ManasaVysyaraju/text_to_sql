@@ -1,0 +1,81 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5001
+Press CTRL+C to quit
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 101-910-151
+ * Serving Flask app 'app'
+ * Debug mode: on
+Address already in use
+Port 5001 is in use by another program. Either identify and stop that program, or start the server with a different port.
+127.0.0.1 - - [18/Sep/2024 11:35:50] "POST /query HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/Desktop/text_to_sql/app.py", line 70, in query
+    sql_query = get_gemini_response(question, prompt)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/Desktop/text_to_sql/app.py", line 23, in get_gemini_response
+    return cleaned_response.text
+           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'text'
+ * Detected change in '/home/manasa/Desktop/text_to_sql/app.py', reloading
+ * Detected change in '/home/manasa/Desktop/text_to_sql/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 101-910-151
+127.0.0.1 - - [18/Sep/2024 11:37:11] "POST /query HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/anaconda3/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/Desktop/text_to_sql/app.py", line 70, in query
+    sql_query = get_gemini_response(question, prompt)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manasa/Desktop/text_to_sql/app.py", line 23, in get_gemini_response
+    return sql_query
+           ^^^^^^^^^
+NameError: name 'sql_quer' is not defined
+ * Detected change in '/home/manasa/Desktop/text_to_sql/app.py', reloading
+ * Detected change in '/home/manasa/Desktop/text_to_sql/app.py', reloading
+ * Detected change in '/home/manasa/Desktop/text_to_sql/app.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 101-910-151
+127.0.0.1 - - [18/Sep/2024 11:37:36] "POST /query HTTP/1.1" 200 -
+ * Detected change in '/home/manasa/Desktop/text_to_sql/app.py', reloading
+ * Detected change in '/home/manasa/Desktop/text_to_sql/app.py', reloading
+Generated SQL Query: SELECT AVG(amount) FROM users;
